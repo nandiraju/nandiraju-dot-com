@@ -43,15 +43,48 @@
 
   <style>
     :root {
-      color-scheme: light dark;
+      color-scheme: dark;
+      --bg: #111111;
+      --fg: #eaeaea;
+      --muted: #aaaaaa;
+      --h2-fg: #cccccc;
+      --card-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+      --card-hover-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+      --card-border: rgba(255, 255, 255, 0.14);
+      --card-hover-border: rgba(255, 255, 255, 0.3);
+      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      --card-hover-shadow: 0 18px 42px rgba(0, 0, 0, 0.58), 0 4px 12px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+      --card-desc: #a3a3ad;
+      --footer-fg: #888888;
+      --footer-link: #aaaaaa;
+      --orbit-glow: radial-gradient(circle, rgba(128, 255, 249, 0.08) 0%, rgba(78, 155, 238, 0.04) 38%, hsla(0, 0%, 7%, 0) 70%);
+      --orbit-center-shade: radial-gradient(ellipse at center, hsla(0, 0%, 7%, 0.94) 0%, hsla(0, 0%, 7%, 0.84) 40%, hsla(0, 0%, 7%, 0.45) 68%, hsla(0, 0%, 7%, 0) 88%);
+      --orbit-vignette: radial-gradient(ellipse 120% 120% at center, hsla(0, 0%, 7%, 0) 55%, hsla(0, 0%, 7%, 0.4) 100%);
+      --orbit-bottom-fade: linear-gradient(0deg, #111111 0%, hsla(0, 0%, 7%, 0.94) 24%, hsla(0, 0%, 7%, 0.54) 58%, hsla(0, 0%, 7%, 0) 100%);
+      --toggle-bg: rgba(24, 24, 27, 0.8);
+      --toggle-border: rgba(255, 255, 255, 0.16);
+      --toggle-track: #27272a;
+      --toggle-thumb: #ffffff;
+      --toggle-fg: #f4f4f5;
+      --mockup-bg: #18181b;
+      --mockup-sub: #27272a;
+      --mockup-line: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Pure-CSS manual light theme override (default is dark) */
+    body:has(#theme-toggle:checked) {
+      color-scheme: light;
       --bg: #fafafa;
       --fg: #1a1a1a;
       --muted: #555555;
       --h2-fg: #333333;
-      --card-surface: rgba(255, 255, 255, 0.84);
-      --card-border: rgba(0, 0, 0, 0.09);
-      --card-hover-border: rgba(0, 0, 0, 0.25);
-      --card-desc: #666666;
+      --card-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.52) 100%);
+      --card-hover-surface: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.68) 100%);
+      --card-border: rgba(255, 255, 255, 0.85);
+      --card-hover-border: rgba(0, 0, 0, 0.16);
+      --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      --card-hover-shadow: 0 18px 40px rgba(15, 23, 42, 0.13), 0 4px 12px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1);
+      --card-desc: #5a5a64;
       --footer-fg: #777777;
       --footer-link: #555555;
       --orbit-glow: radial-gradient(circle, rgba(78, 155, 238, 0.08) 0%, rgba(52, 137, 254, 0.03) 38%, rgba(52, 137, 254, 0) 70%);
@@ -68,88 +101,6 @@
       --mockup-line: rgba(0, 0, 0, 0.09);
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111111;
-        --fg: #eaeaea;
-        --muted: #aaaaaa;
-        --h2-fg: #cccccc;
-        --card-surface: rgba(27, 27, 27, 0.82);
-        --card-border: rgba(255, 255, 255, 0.1);
-        --card-hover-border: rgba(255, 255, 255, 0.28);
-        --card-desc: #999999;
-        --footer-fg: #888888;
-        --footer-link: #aaaaaa;
-        --orbit-glow: radial-gradient(circle, rgba(128, 255, 249, 0.08) 0%, rgba(78, 155, 238, 0.04) 38%, hsla(0, 0%, 7%, 0) 70%);
-        --orbit-center-shade: radial-gradient(ellipse at center, hsla(0, 0%, 7%, 0.94) 0%, hsla(0, 0%, 7%, 0.84) 40%, hsla(0, 0%, 7%, 0.45) 68%, hsla(0, 0%, 7%, 0) 88%);
-        --orbit-vignette: radial-gradient(ellipse 120% 120% at center, hsla(0, 0%, 7%, 0) 55%, hsla(0, 0%, 7%, 0.4) 100%);
-        --orbit-bottom-fade: linear-gradient(0deg, #111111 0%, hsla(0, 0%, 7%, 0.94) 24%, hsla(0, 0%, 7%, 0.54) 58%, hsla(0, 0%, 7%, 0) 100%);
-        --toggle-bg: rgba(24, 24, 27, 0.8);
-        --toggle-border: rgba(255, 255, 255, 0.16);
-        --toggle-track: #27272a;
-        --toggle-thumb: #ffffff;
-        --toggle-fg: #f4f4f5;
-        --mockup-bg: #18181b;
-        --mockup-sub: #27272a;
-        --mockup-line: rgba(255, 255, 255, 0.1);
-      }
-    }
-
-    /* Pure-CSS manual theme override (toggles opposite of OS preference) */
-    body:has(#theme-toggle:checked) {
-      --bg: #111111;
-      --fg: #eaeaea;
-      --muted: #aaaaaa;
-      --h2-fg: #cccccc;
-      --card-surface: rgba(27, 27, 27, 0.82);
-      --card-border: rgba(255, 255, 255, 0.1);
-      --card-hover-border: rgba(255, 255, 255, 0.28);
-      --card-desc: #999999;
-      --footer-fg: #888888;
-      --footer-link: #aaaaaa;
-      --orbit-glow: radial-gradient(circle, rgba(128, 255, 249, 0.08) 0%, rgba(78, 155, 238, 0.04) 38%, hsla(0, 0%, 7%, 0) 70%);
-      --orbit-center-shade: radial-gradient(ellipse at center, hsla(0, 0%, 7%, 0.94) 0%, hsla(0, 0%, 7%, 0.84) 40%, hsla(0, 0%, 7%, 0.45) 68%, hsla(0, 0%, 7%, 0) 88%);
-      --orbit-vignette: radial-gradient(ellipse 120% 120% at center, hsla(0, 0%, 7%, 0) 55%, hsla(0, 0%, 7%, 0.4) 100%);
-      --orbit-bottom-fade: linear-gradient(0deg, #111111 0%, hsla(0, 0%, 7%, 0.94) 24%, hsla(0, 0%, 7%, 0.54) 58%, hsla(0, 0%, 7%, 0) 100%);
-      --toggle-bg: rgba(24, 24, 27, 0.8);
-      --toggle-border: rgba(255, 255, 255, 0.16);
-      --toggle-track: #27272a;
-      --toggle-thumb: #ffffff;
-      --toggle-fg: #f4f4f5;
-      --mockup-bg: #18181b;
-      --mockup-sub: #27272a;
-      --mockup-line: rgba(255, 255, 255, 0.1);
-      color-scheme: dark;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body:has(#theme-toggle:checked) {
-        --bg: #fafafa;
-        --fg: #1a1a1a;
-        --muted: #555555;
-        --h2-fg: #333333;
-        --card-surface: rgba(255, 255, 255, 0.84);
-        --card-border: rgba(0, 0, 0, 0.09);
-        --card-hover-border: rgba(0, 0, 0, 0.25);
-        --card-desc: #666666;
-        --footer-fg: #777777;
-        --footer-link: #555555;
-        --orbit-glow: radial-gradient(circle, rgba(78, 155, 238, 0.08) 0%, rgba(52, 137, 254, 0.03) 38%, rgba(52, 137, 254, 0) 70%);
-        --orbit-center-shade: radial-gradient(ellipse at center, hsla(0, 0%, 98%, 0.94) 0%, hsla(0, 0%, 98%, 0.84) 40%, hsla(0, 0%, 98%, 0.45) 68%, hsla(0, 0%, 98%, 0) 88%);
-        --orbit-vignette: radial-gradient(ellipse 120% 120% at center, hsla(0, 0%, 98%, 0) 55%, hsla(0, 0%, 98%, 0.35) 100%);
-        --orbit-bottom-fade: linear-gradient(0deg, #fafafa 0%, hsla(0, 0%, 98%, 0.92) 24%, hsla(0, 0%, 98%, 0.5) 58%, hsla(0, 0%, 98%, 0) 100%);
-        --toggle-bg: rgba(255, 255, 255, 0.85);
-        --toggle-border: rgba(0, 0, 0, 0.12);
-        --toggle-track: #e4e4e7;
-        --toggle-thumb: #ffffff;
-        --toggle-fg: #18181b;
-        --mockup-bg: #ffffff;
-        --mockup-sub: #f3f4f6;
-        --mockup-line: rgba(0, 0, 0, 0.09);
-        color-scheme: light;
-      }
-    }
-
     * { box-sizing: border-box; }
 
     body {
@@ -164,7 +115,7 @@
     }
 
     /* =========================================================
-       PURE-CSS THEME & 3D FLIP TOGGLES
+       PURE-CSS THEME TOGGLE
        ========================================================= */
     .toggle-input {
       position: fixed;
@@ -195,8 +146,7 @@
       transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
     }
 
-    .theme-toggle:active,
-    .flip-toggle:active {
+    .theme-toggle:active {
       transform: scale(0.97);
     }
 
@@ -207,24 +157,13 @@
       flex-shrink: 0;
     }
 
-    .theme-toggle__icon--sun { display: none; }
-    .theme-toggle__icon--moon { display: block; }
+    .theme-toggle__icon--sun { display: block; }
+    .theme-toggle__icon--moon { display: none; }
 
-    @media (prefers-color-scheme: dark) {
-      .theme-toggle__icon--sun { display: block; }
-      .theme-toggle__icon--moon { display: none; }
-    }
+    body:has(#theme-toggle:checked) .theme-toggle__icon--sun { display: none; }
+    body:has(#theme-toggle:checked) .theme-toggle__icon--moon { display: block; }
 
-    body:has(#theme-toggle:checked) .theme-toggle__icon--sun { display: block; }
-    body:has(#theme-toggle:checked) .theme-toggle__icon--moon { display: none; }
-
-    @media (prefers-color-scheme: dark) {
-      body:has(#theme-toggle:checked) .theme-toggle__icon--sun { display: none; }
-      body:has(#theme-toggle:checked) .theme-toggle__icon--moon { display: block; }
-    }
-
-    .theme-toggle__track,
-    .flip-toggle__track {
+    .theme-toggle__track {
       position: relative;
       width: 34px;
       height: 20px;
@@ -233,8 +172,7 @@
       transition: background-color 0.25s ease;
     }
 
-    .theme-toggle__thumb,
-    .flip-toggle__thumb {
+    .theme-toggle__thumb {
       position: absolute;
       top: 2px;
       left: 2px;
@@ -243,44 +181,11 @@
       border-radius: 50%;
       background: var(--toggle-thumb);
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      transform: translateX(14px);
       transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
-    @media (prefers-color-scheme: dark) {
-      .theme-toggle__thumb { transform: translateX(14px); }
-    }
-
-    body:has(#theme-toggle:checked) .theme-toggle__thumb { transform: translateX(14px); }
-
-    @media (prefers-color-scheme: dark) {
-      body:has(#theme-toggle:checked) .theme-toggle__thumb { transform: translateX(0); }
-    }
-
-    .flip-toggle {
-      position: fixed;
-      bottom: 20px;
-      right: 24px;
-      z-index: 20;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px 6px 12px;
-      border-radius: 9999px;
-      background: var(--toggle-bg);
-      border: 1px solid var(--toggle-border);
-      color: var(--toggle-fg);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-      cursor: pointer;
-      user-select: none;
-      font-size: 13px;
-      font-weight: 500;
-      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
-    }
-
-    body:has(#flip-toggle:checked) .flip-toggle__track { background: #3489FE; }
-    body:has(#flip-toggle:checked) .flip-toggle__thumb { transform: translateX(14px); }
+    body:has(#theme-toggle:checked) .theme-toggle__thumb { transform: translateX(0); }
 
     /* =========================================================
        RADIAL ORBIT BACKGROUND ANIMATION (from SpinPages)
@@ -380,15 +285,6 @@
       transform: translate(-50%, -50%);
       opacity: var(--orbit-opacity, 1);
       transition: opacity 0.12s linear;
-    }
-
-    body:has(#flip-toggle:checked) .radial-orbit__frame {
-      animation: radial-orbit-flip-3d var(--flip-duration) linear infinite;
-    }
-
-    @keyframes radial-orbit-flip-3d {
-      0% { transform: translate(-50%, -50%) rotateY(0deg); }
-      100% { transform: translate(-50%, -50%) rotateY(360deg); }
     }
 
     /* Orbiting Browser & Phone Frames */
@@ -628,20 +524,23 @@
 
     a.card {
       display: block;
-      padding: 16px 18px;
+      padding: 18px 20px;
       background: var(--card-surface);
       border: 1px solid var(--card-border);
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
       color: inherit;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: border-color .15s, transform .15s, background-color .25s;
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      box-shadow: var(--card-shadow);
+      transition: border-color .2s ease, transform .2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow .2s ease, background .25s ease;
     }
 
     a.card:hover {
+      background: var(--card-hover-surface);
       border-color: var(--card-hover-border);
-      transform: translateY(-2px);
+      box-shadow: var(--card-hover-shadow);
+      transform: translateY(-3px);
     }
 
     a.card .name { font-weight: 600; font-size: 1.02rem; }
@@ -652,8 +551,7 @@
   </style>
 </head>
 <body>
-  <input type="checkbox" id="theme-toggle" class="toggle-input" aria-label="Toggle dark and light mode">
-  <input type="checkbox" id="flip-toggle" class="toggle-input" aria-label="Toggle 3D flip animation">
+  <input type="checkbox" id="theme-toggle" class="toggle-input" aria-label="Toggle light and dark mode">
 
   <label for="theme-toggle" class="theme-toggle" title="Toggle light/dark mode">
     <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -763,7 +661,7 @@
   <main class="wrap">
     <header>
       <h1>Srikanth Nandiraju</h1>
-      <p class="lede">CTO and builder. I ship small, useful apps and AI experiments — here's where they live. Everything below is free to try, no sign-up.</p>
+      <p class="lede">Builder, tinkerer, and maker of things. Exploring ideas across software, design, and AI — crafted for curiosity and free to try.</p>
     </header>
 
     <h2>Health &amp; wellbeing</h2>
@@ -795,12 +693,5 @@
       <a href="https://srikanth.nandiraju.com/">About</a>
     </footer>
   </main>
-
-  <label for="flip-toggle" class="flip-toggle" title="Toggle 3D flip on orbiting cards">
-    <span>3D Flip</span>
-    <span class="flip-toggle__track" aria-hidden="true">
-      <span class="flip-toggle__thumb"></span>
-    </span>
-  </label>
 </body>
 </html>
