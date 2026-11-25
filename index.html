@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Srikanth Nandiraju — Apps, AI Projects &amp; Experiments</title>
-  <meta name="description" content="Home of Srikanth Nandiraju's apps and AI projects: health and mood trackers, countdown and quiz tools, cancer information, video greetings and more. Try them free.">
+  <meta name="description"
+    content="Home of Srikanth Nandiraju's apps and AI projects: health and mood trackers, countdown and quiz tools, cancer information, video greetings and more. Try them free.">
   <link rel="canonical" href="https://nandiraju.com/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
@@ -14,7 +16,8 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Srikanth Nandiraju — Apps, AI Projects &amp; Experiments">
-  <meta property="og:description" content="A home for Srikanth Nandiraju's apps and AI projects — health, mood, countdown, quiz, cancer info, video greetings and more.">
+  <meta property="og:description"
+    content="A home for Srikanth Nandiraju's apps and AI projects — health, mood, countdown, quiz, cancer info, video greetings and more.">
   <meta property="og:url" content="https://nandiraju.com/">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -101,7 +104,9 @@
       --mockup-line: rgba(0, 0, 0, 0.09);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -157,11 +162,21 @@
       flex-shrink: 0;
     }
 
-    .theme-toggle__icon--sun { display: block; }
-    .theme-toggle__icon--moon { display: none; }
+    .theme-toggle__icon--sun {
+      display: block;
+    }
 
-    body:has(#theme-toggle:checked) .theme-toggle__icon--sun { display: none; }
-    body:has(#theme-toggle:checked) .theme-toggle__icon--moon { display: block; }
+    .theme-toggle__icon--moon {
+      display: none;
+    }
+
+    body:has(#theme-toggle:checked) .theme-toggle__icon--sun {
+      display: none;
+    }
+
+    body:has(#theme-toggle:checked) .theme-toggle__icon--moon {
+      display: block;
+    }
 
     .theme-toggle__track {
       position: relative;
@@ -185,7 +200,9 @@
       transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
-    body:has(#theme-toggle:checked) .theme-toggle__thumb { transform: translateX(0); }
+    body:has(#theme-toggle:checked) .theme-toggle__thumb {
+      transform: translateX(0);
+    }
 
     /* =========================================================
        RADIAL ORBIT BACKGROUND ANIMATION (from SpinPages)
@@ -247,7 +264,9 @@
     }
 
     @media (min-width: 1850px) and (min-height: 1050px) {
-      .radial-orbit__ring--0 { display: block; }
+      .radial-orbit__ring--0 {
+        display: block;
+      }
     }
 
     .radial-orbit__ring--1 {
@@ -317,9 +336,17 @@
       border-radius: 50%;
     }
 
-    .radial-orbit__browser-bar i:first-child { background: #ff5f56; }
-    .radial-orbit__browser-bar i:nth-child(2) { background: #ffbd2e; }
-    .radial-orbit__browser-bar i:nth-child(3) { background: #27c93f; }
+    .radial-orbit__browser-bar i:first-child {
+      background: #ff5f56;
+    }
+
+    .radial-orbit__browser-bar i:nth-child(2) {
+      background: #ffbd2e;
+    }
+
+    .radial-orbit__browser-bar i:nth-child(3) {
+      background: #27c93f;
+    }
 
     .radial-orbit__browser-bar span {
       flex: 1;
@@ -381,10 +408,21 @@
       background: var(--mockup-line);
     }
 
-    .ui-pill--blue { background: linear-gradient(90deg, #4E9BEE, #57D5FE); }
-    .ui-pill--green { background: linear-gradient(90deg, #34d399, #81FF89); }
-    .ui-pill--amber { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
-    .ui-pill--violet { background: linear-gradient(90deg, #8b5cf6, #ec4899); }
+    .ui-pill--blue {
+      background: linear-gradient(90deg, #4E9BEE, #57D5FE);
+    }
+
+    .ui-pill--green {
+      background: linear-gradient(90deg, #34d399, #81FF89);
+    }
+
+    .ui-pill--amber {
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    }
+
+    .ui-pill--violet {
+      background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    }
 
     .ui-box {
       flex: 1;
@@ -404,10 +442,21 @@
       border-radius: 7px;
     }
 
-    .ui-grad--blue { background: linear-gradient(135deg, #4E9BEE 0%, #57D5FE 55%, #3489FE 100%); }
-    .ui-grad--mint { background: linear-gradient(135deg, #059669 0%, #34d399 55%, #81FF89 100%); }
-    .ui-grad--sunset { background: linear-gradient(135deg, #f97316 0%, #ec4899 65%, #8b5cf6 100%); }
-    .ui-grad--indigo { background: linear-gradient(135deg, #312e81 0%, #6366f1 55%, #38bdf8 100%); }
+    .ui-grad--blue {
+      background: linear-gradient(135deg, #4E9BEE 0%, #57D5FE 55%, #3489FE 100%);
+    }
+
+    .ui-grad--mint {
+      background: linear-gradient(135deg, #059669 0%, #34d399 55%, #81FF89 100%);
+    }
+
+    .ui-grad--sunset {
+      background: linear-gradient(135deg, #f97316 0%, #ec4899 65%, #8b5cf6 100%);
+    }
+
+    .ui-grad--indigo {
+      background: linear-gradient(135deg, #312e81 0%, #6366f1 55%, #38bdf8 100%);
+    }
 
     .ui-line {
       height: 5px;
@@ -415,8 +464,13 @@
       background: var(--mockup-line);
     }
 
-    .ui-line--short { width: 62%; }
-    .ui-line--med { width: 82%; }
+    .ui-line--short {
+      width: 62%;
+    }
+
+    .ui-line--med {
+      width: 82%;
+    }
 
     .ui-bars {
       display: flex;
@@ -432,11 +486,29 @@
       background: linear-gradient(180deg, #4E9BEE, #3489FE);
     }
 
-    .ui-bars span:nth-child(1) { height: 42%; opacity: 0.6; }
-    .ui-bars span:nth-child(2) { height: 78%; opacity: 0.85; }
-    .ui-bars span:nth-child(3) { height: 55%; opacity: 0.7; }
-    .ui-bars span:nth-child(4) { height: 95%; }
-    .ui-bars span:nth-child(5) { height: 68%; opacity: 0.8; }
+    .ui-bars span:nth-child(1) {
+      height: 42%;
+      opacity: 0.6;
+    }
+
+    .ui-bars span:nth-child(2) {
+      height: 78%;
+      opacity: 0.85;
+    }
+
+    .ui-bars span:nth-child(3) {
+      height: 55%;
+      opacity: 0.7;
+    }
+
+    .ui-bars span:nth-child(4) {
+      height: 95%;
+    }
+
+    .ui-bars span:nth-child(5) {
+      height: 68%;
+      opacity: 0.8;
+    }
 
     /* Overlays */
     .radial-orbit__center-shade,
@@ -469,21 +541,39 @@
     }
 
     @keyframes radial-orbit-spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     @keyframes radial-orbit-reveal {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     @keyframes content-reveal {
-      0% { opacity: 0; transform: translateY(6px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
+
       .radial-orbit__ring,
       .radial-orbit__stage,
       .wrap {
@@ -496,7 +586,9 @@
     }
 
     @media (max-width: 767px) {
-      .radial-orbit { display: none; }
+      .radial-orbit {
+        display: none;
+      }
     }
 
     /* =========================================================
@@ -511,10 +603,28 @@
       animation: content-reveal 0.5s ease-out both;
     }
 
-    header { margin-bottom: 36px; }
-    h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -0.02em; }
-    .lede { font-size: 1.1rem; color: var(--muted); margin: 0; max-width: 60ch; }
-    h2 { font-size: 1.1rem; margin: 40px 0 14px; color: var(--h2-fg); }
+    header {
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .lede {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0;
+      max-width: 60ch;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin: 40px 0 14px;
+      color: var(--h2-fg);
+    }
 
     .grid {
       display: grid;
@@ -523,33 +633,181 @@
     }
 
     a.card {
+      --c1: #4E9BEE;
+      --c2: #57D5FE;
+      position: relative;
+      overflow: hidden;
       display: block;
       padding: 18px 20px;
-      background: var(--card-surface);
-      border: 1px solid var(--card-border);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--c1) 20%, transparent) 0%, color-mix(in srgb, var(--c2) 10%, transparent) 100%),
+        var(--card-surface);
+      border: 1px solid color-mix(in srgb, var(--c1) 32%, var(--card-border));
       border-radius: 14px;
       text-decoration: none;
       color: inherit;
       backdrop-filter: blur(18px) saturate(160%);
       -webkit-backdrop-filter: blur(18px) saturate(160%);
-      box-shadow: var(--card-shadow);
-      transition: border-color .2s ease, transform .2s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow .2s ease, background .25s ease;
+      box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.42),
+        0 4px 16px color-mix(in srgb, var(--c1) 18%, transparent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+      transition: border-color .22s ease, transform .22s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow .22s ease, background .25s ease;
     }
 
     a.card:hover {
-      background: var(--card-hover-surface);
-      border-color: var(--card-hover-border);
-      box-shadow: var(--card-hover-shadow);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--c1) 28%, transparent) 0%, color-mix(in srgb, var(--c2) 16%, transparent) 100%),
+        var(--card-hover-surface);
+      border-color: color-mix(in srgb, var(--c1) 56%, var(--card-hover-border));
+      box-shadow:
+        0 20px 44px rgba(0, 0, 0, 0.54),
+        0 8px 26px color-mix(in srgb, var(--c1) 30%, transparent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24);
       transform: translateY(-3px);
     }
 
-    a.card .name { font-weight: 600; font-size: 1.02rem; }
-    a.card .desc { color: var(--card-desc); font-size: 0.92rem; margin-top: 4px; }
+    body:has(#theme-toggle:checked) a.card {
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--c1) 14%, transparent) 0%, color-mix(in srgb, var(--c2) 8%, transparent) 100%),
+        var(--card-surface);
+      border-color: color-mix(in srgb, var(--c1) 28%, var(--card-border));
+      box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08),
+        0 4px 14px color-mix(in srgb, var(--c1) 14%, transparent),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
 
-    footer { margin-top: 48px; color: var(--footer-fg); font-size: 0.85rem; }
-    footer a { color: var(--footer-link); }
+    body:has(#theme-toggle:checked) a.card:hover {
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--c1) 22%, transparent) 0%, color-mix(in srgb, var(--c2) 13%, transparent) 100%),
+        var(--card-hover-surface);
+      border-color: color-mix(in srgb, var(--c1) 48%, var(--card-hover-border));
+      box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.13),
+        0 8px 22px color-mix(in srgb, var(--c1) 24%, transparent),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    }
+
+    /* Per-card glassmorphic gradient palettes */
+    .grid:nth-of-type(1) a.card:nth-child(1) {
+      --c1: #10b981;
+      --c2: #06b6d4;
+    }
+
+    .grid:nth-of-type(1) a.card:nth-child(2) {
+      --c1: #8b5cf6;
+      --c2: #ec4899;
+    }
+
+    .grid:nth-of-type(1) a.card:nth-child(3) {
+      --c1: #38bdf8;
+      --c2: #6366f1;
+    }
+
+    .grid:nth-of-type(1) a.card:nth-child(4) {
+      --c1: #f43f5e;
+      --c2: #fb923c;
+    }
+
+    .grid:nth-of-type(2) a.card:nth-child(1) {
+      --c1: #3b82f6;
+      --c2: #22d3ee;
+    }
+
+    .grid:nth-of-type(2) a.card:nth-child(2) {
+      --c1: #f59e0b;
+      --c2: #f97316;
+    }
+
+    .grid:nth-of-type(2) a.card:nth-child(3) {
+      --c1: #84cc16;
+      --c2: #10b981;
+    }
+
+    .grid:nth-of-type(2) a.card:nth-child(4) {
+      --c1: #ec4899;
+      --c2: #8b5cf6;
+    }
+
+    .grid:nth-of-type(2) a.card:nth-child(5) {
+      --c1: #eab308;
+      --c2: #f43f5e;
+    }
+
+    .grid:nth-of-type(3) a.card:nth-child(1) {
+      --c1: #60a5fa;
+      --c2: #34d399;
+    }
+
+    .grid:nth-of-type(3) a.card:nth-child(2) {
+      --c1: #6366f1;
+      --c2: #a855f7;
+    }
+
+    .grid:nth-of-type(3) a.card:nth-child(3) {
+      --c1: #06b6d4;
+      --c2: #4ade80;
+    }
+
+    a.card .card-head {
+      display: contents;
+    }
+
+    a.card .card-icon {
+      position: absolute;
+      right: -6px;
+      bottom: -8px;
+      width: 84px;
+      height: 84px;
+      color: var(--c1);
+      opacity: 0.14;
+      transform: rotate(-12deg);
+      pointer-events: none;
+      z-index: 0;
+      transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.28s ease;
+    }
+
+    a.card:hover .card-icon {
+      opacity: 0.25;
+      transform: rotate(-6deg) scale(1.08);
+    }
+
+    a.card .card-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    a.card .name,
+    a.card .desc {
+      position: relative;
+      z-index: 1;
+    }
+
+    a.card .name {
+      font-weight: 600;
+      font-size: 1.02rem;
+    }
+
+    a.card .desc {
+      color: var(--card-desc);
+      font-size: 0.92rem;
+      margin-top: 4px;
+    }
+
+    footer {
+      margin-top: 48px;
+      color: var(--footer-fg);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--footer-link);
+    }
   </style>
 </head>
+
 <body>
   <input type="checkbox" id="theme-toggle" class="toggle-input" aria-label="Toggle light and dark mode">
 
@@ -578,76 +836,306 @@
       <div class="radial-orbit__rings">
         <!-- RING 0: 6 phone cards (ultrawide viewports), 110s -->
         <div class="radial-orbit__ring radial-orbit__ring--0">
-          <div class="radial-orbit__card" style="--orbit-angle: 18deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--blue"></div><div class="ui-box"><div class="ui-grad ui-grad--blue"></div><div class="ui-line ui-line--short"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 18deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--blue"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--blue"></div>
+                    <div class="ui-line ui-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 78deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--green"></div><div class="ui-box"><div class="ui-grad ui-grad--mint"></div><div class="ui-line ui-line--med"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 78deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--green"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--mint"></div>
+                    <div class="ui-line ui-line--med"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 138deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--violet"></div><div class="ui-box"><div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div><div class="ui-line ui-line--short"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 138deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--violet"></div>
+                  <div class="ui-box">
+                    <div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="ui-line ui-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 198deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--amber"></div><div class="ui-box"><div class="ui-grad ui-grad--sunset"></div><div class="ui-line ui-line--med"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 198deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--amber"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--sunset"></div>
+                    <div class="ui-line ui-line--med"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 258deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--blue"></div><div class="ui-box"><div class="ui-grad ui-grad--indigo"></div><div class="ui-line ui-line--short"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 258deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--blue"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--indigo"></div>
+                    <div class="ui-line ui-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 318deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--green"></div><div class="ui-box"><div class="ui-grad ui-grad--mint"></div><div class="ui-line ui-line--med"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 318deg; --orbit-width: 105.0px; --orbit-height: 219.8px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--green"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--mint"></div>
+                    <div class="ui-line ui-line--med"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- RING 1: 7 cards, 88s -->
         <div class="radial-orbit__ring radial-orbit__ring--1">
-          <div class="radial-orbit__card" style="--orbit-angle: 8deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--blue"></div><div class="ui-box"><div class="ui-grad ui-grad--blue"></div><div class="ui-line ui-line--med"></div><div class="ui-line ui-line--short"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 8deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--blue"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--blue"></div>
+                    <div class="ui-line ui-line--med"></div>
+                    <div class="ui-line ui-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 59.43deg; --orbit-width: 176px; --orbit-height: 122px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__browser"><div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div><div class="radial-orbit__browser-body"><div class="ui-pill ui-pill--green"></div><div class="ui-box"><div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 59.43deg; --orbit-width: 176px; --orbit-height: 122px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__browser">
+                <div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div>
+                <div class="radial-orbit__browser-body">
+                  <div class="ui-pill ui-pill--green"></div>
+                  <div class="ui-box">
+                    <div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 110.86deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--violet"></div><div class="ui-box"><div class="ui-grad ui-grad--sunset"></div><div class="ui-line ui-line--short"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 110.86deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--violet"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--sunset"></div>
+                    <div class="ui-line ui-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 162.29deg; --orbit-width: 176px; --orbit-height: 122px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__browser"><div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div><div class="radial-orbit__browser-body"><div class="ui-pill ui-pill--blue"></div><div class="ui-box"><div class="ui-grad ui-grad--indigo"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 162.29deg; --orbit-width: 176px; --orbit-height: 122px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__browser">
+                <div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div>
+                <div class="radial-orbit__browser-body">
+                  <div class="ui-pill ui-pill--blue"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--indigo"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 213.71deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--green"></div><div class="ui-box"><div class="ui-grad ui-grad--mint"></div><div class="ui-line ui-line--med"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 213.71deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--green"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--mint"></div>
+                    <div class="ui-line ui-line--med"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 265.14deg; --orbit-width: 176px; --orbit-height: 122px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__browser"><div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div><div class="radial-orbit__browser-body"><div class="ui-pill ui-pill--amber"></div><div class="ui-box"><div class="ui-grad ui-grad--sunset"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 265.14deg; --orbit-width: 176px; --orbit-height: 122px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__browser">
+                <div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div>
+                <div class="radial-orbit__browser-body">
+                  <div class="ui-pill ui-pill--amber"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--sunset"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 316.57deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--blue"></div><div class="ui-box"><div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div><div class="ui-line ui-line--med"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 316.57deg; --orbit-width: 121.6px; --orbit-height: 254.6px; --orbit-opacity: 1;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--blue"></div>
+                  <div class="ui-box">
+                    <div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="ui-line ui-line--med"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- RING 2: 8 cards, 68s, opacity 0.85 -->
         <div class="radial-orbit__ring radial-orbit__ring--2">
-          <div class="radial-orbit__card" style="--orbit-angle: 14deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--green"></div><div class="ui-box"><div class="ui-grad ui-grad--mint"></div><div class="ui-line ui-line--short"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 14deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--green"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--mint"></div>
+                    <div class="ui-line ui-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 59deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__browser"><div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div><div class="radial-orbit__browser-body"><div class="ui-pill ui-pill--blue"></div><div class="ui-box"><div class="ui-grad ui-grad--blue"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 59deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__browser">
+                <div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div>
+                <div class="radial-orbit__browser-body">
+                  <div class="ui-pill ui-pill--blue"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--blue"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 104deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--violet"></div><div class="ui-box"><div class="ui-grad ui-grad--sunset"></div><div class="ui-line ui-line--med"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 104deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--violet"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--sunset"></div>
+                    <div class="ui-line ui-line--med"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 149deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__browser"><div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div><div class="radial-orbit__browser-body"><div class="ui-pill ui-pill--amber"></div><div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 149deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__browser">
+                <div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div>
+                <div class="radial-orbit__browser-body">
+                  <div class="ui-pill ui-pill--amber"></div>
+                  <div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 194deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--blue"></div><div class="ui-box"><div class="ui-grad ui-grad--indigo"></div><div class="ui-line ui-line--short"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 194deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--blue"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--indigo"></div>
+                    <div class="ui-line ui-line--short"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 239deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__browser"><div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div><div class="radial-orbit__browser-body"><div class="ui-pill ui-pill--green"></div><div class="ui-box"><div class="ui-grad ui-grad--mint"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 239deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__browser">
+                <div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div>
+                <div class="radial-orbit__browser-body">
+                  <div class="ui-pill ui-pill--green"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--mint"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 284deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span><div class="radial-orbit__phone-screen"><div class="ui-pill ui-pill--amber"></div><div class="ui-box"><div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div><div class="ui-line ui-line--med"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 284deg; --orbit-width: 92.2px; --orbit-height: 193.0px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__phone"><span class="radial-orbit__phone-island"></span>
+                <div class="radial-orbit__phone-screen">
+                  <div class="ui-pill ui-pill--amber"></div>
+                  <div class="ui-box">
+                    <div class="ui-bars"><span></span><span></span><span></span><span></span><span></span></div>
+                    <div class="ui-line ui-line--med"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="radial-orbit__card" style="--orbit-angle: 329deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
-            <div class="radial-orbit__frame"><div class="radial-orbit__browser"><div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div><div class="radial-orbit__browser-body"><div class="ui-pill ui-pill--violet"></div><div class="ui-box"><div class="ui-grad ui-grad--sunset"></div></div></div></div></div>
+          <div class="radial-orbit__card"
+            style="--orbit-angle: 329deg; --orbit-width: 142px; --orbit-height: 98px; --orbit-opacity: 0.85;">
+            <div class="radial-orbit__frame">
+              <div class="radial-orbit__browser">
+                <div class="radial-orbit__browser-bar"><i></i><i></i><i></i><span></span></div>
+                <div class="radial-orbit__browser-body">
+                  <div class="ui-pill ui-pill--violet"></div>
+                  <div class="ui-box">
+                    <div class="ui-grad ui-grad--sunset"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -661,31 +1149,103 @@
   <main class="wrap">
     <header>
       <h1>Srikanth Nandiraju</h1>
-      <p class="lede">Builder, tinkerer, and maker of things. Exploring ideas across software, design, and AI — crafted for curiosity and free to try.</p>
+      <p class="lede">I build small, useful apps and experiments — free to try, no sign-up.</p>
     </header>
 
     <h2>Health &amp; wellbeing</h2>
     <div class="grid">
-      <a class="card" href="https://health.cend.in/"><div class="name">HealthTik</div><div class="desc">Symptom tracker for iPhone &amp; Android — log, map and share doctor-ready reports.</div></a>
-      <a class="card" href="https://moodmeter.cend.in/"><div class="name">Mood Meter</div><div class="desc">Private mood tracker &amp; journal with 220+ moods and trends.</div></a>
-      <a class="card" href="https://healment.cend.in/"><div class="name">HealMent</div><div class="desc">Guided journaling app for better mental health.</div></a>
-      <a class="card" href="https://cancer.cend.in/"><div class="name">CancerNotes</div><div class="desc">Cancer news, quick tips, quizzes and private notes across 118 cancer types.</div></a>
+      <a class="card" href="https://health.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+          <div class="name">HealthTik</div>
+        </div>
+        <div class="desc">Symptom tracker for iPhone &amp; Android — log, map and share doctor-ready reports.</div>
+      </a>
+      <a class="card" href="https://moodmeter.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg></span>
+          <div class="name">Mood Meter</div>
+        </div>
+        <div class="desc">Private mood tracker &amp; journal with 220+ moods and trends.</div>
+      </a>
+      <a class="card" href="https://healment.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+          <div class="name">HealMent</div>
+        </div>
+        <div class="desc">Guided journaling app for better mental health.</div>
+      </a>
+      <a class="card" href="https://cancer.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+          <div class="name">CancerNotes</div>
+        </div>
+        <div class="desc">Cancer news, quick tips, quizzes and private notes across 118 cancer types.</div>
+      </a>
     </div>
 
     <h2>Everyday tools</h2>
     <div class="grid">
-      <a class="card" href="https://timedown.cend.in/"><div class="name">TimeDown</div><div class="desc">Clean countdown app for birthdays, holidays and the moments that matter.</div></a>
-      <a class="card" href="https://quiz-api.cend.in/"><div class="name">AI Quiz Generator</div><div class="desc">Type any topic, get a ready-to-play multiple-choice quiz in seconds.</div></a>
-      <a class="card" href="https://finds.cend.in/"><div class="name">GoodFinds</div><div class="desc">Handpicked home &amp; kitchen finds on Amazon India.</div></a>
-      <a class="card" href="https://cend.in/"><div class="name">Cend.in — Video Greetings</div><div class="desc">Collect short video clips from friends and stitch them into one greeting.</div></a>
-      <a class="card" href="https://gita.cend.in/"><div class="name">Telugu Gita</div><div class="desc">The Bhagavad Gita in Telugu.</div></a>
+      <a class="card" href="https://timedown.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          <div class="name">TimeDown</div>
+        </div>
+        <div class="desc">Clean countdown app for birthdays, holidays and the moments that matter.</div>
+      </a>
+      <a class="card" href="https://quiz-api.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+          <div class="name">AI Quiz Generator</div>
+        </div>
+        <div class="desc">Type any topic, get a ready-to-play multiple-choice quiz in seconds.</div>
+      </a>
+      <a class="card" href="https://finds.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+          <div class="name">GoodFinds</div>
+        </div>
+        <div class="desc">Handpicked home &amp; kitchen finds on Amazon India.</div>
+      </a>
+      <a class="card" href="https://cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m10 8 6 4-6 4Z"/></svg></span>
+          <div class="name">Cend.in — Video Greetings</div>
+        </div>
+        <div class="desc">Collect short video clips from friends and stitch them into one greeting.</div>
+      </a>
+      <a class="card" href="https://gita.cend.in/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></span>
+          <div class="name">Telugu Gita</div>
+        </div>
+        <div class="desc">The Bhagavad Gita in Telugu.</div>
+      </a>
     </div>
 
     <h2>AI &amp; me</h2>
     <div class="grid">
-      <a class="card" href="https://srikanth.nandiraju.com/"><div class="name">About Srikanth</div><div class="desc">Profile — AI/ML technology leader, CTO, patents and background.</div></a>
-      <a class="card" href="https://ai.nandiraju.com/"><div class="name">Ask my AI advisor</div><div class="desc">Chat with an AI-powered virtual advisor on AI and enterprise software.</div></a>
-      <a class="card" href="https://greet.nandiraju.com/"><div class="name">Interactive Avatar</div><div class="desc">A talking digital twin — say hello.</div></a>
+      <a class="card" href="https://srikanth.nandiraju.com/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <div class="name">About Srikanth</div>
+        </div>
+        <div class="desc">Profile — AI/ML technology leader, CTO, patents and background.</div>
+      </a>
+      <a class="card" href="https://ai.nandiraju.com/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div class="name">Ask my AI advisor</div>
+        </div>
+        <div class="desc">Chat with an AI-powered virtual advisor on AI and enterprise software.</div>
+      </a>
+      <a class="card" href="https://greet.nandiraju.com/">
+        <div class="card-head">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></span>
+          <div class="name">Interactive Avatar</div>
+        </div>
+        <div class="desc">A talking digital twin — say hello.</div>
+      </a>
     </div>
 
     <footer>
@@ -694,4 +1254,5 @@
     </footer>
   </main>
 </body>
+
 </html>
